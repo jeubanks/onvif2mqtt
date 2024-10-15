@@ -5,7 +5,9 @@ services:
     # A configuration file is required.
     # See config.example.yml for an example.
     volumes:
-      - ./config.yml:/app/config.yml
+      - type: bind
+        source: ./config.yml
+        target: /app/config.yml
     # Optional debugging.
     # environment:
     #  DEBUG: onvif2mqtt
