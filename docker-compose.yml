@@ -8,6 +8,7 @@ services:
       - type: bind
         source: ./config.yml
         target: /app/config.yml
+    restart: always
     # Optional debugging.
     # environment:
     #  DEBUG: onvif2mqtt
